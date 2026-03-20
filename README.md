@@ -4,24 +4,24 @@
 
 ## 1. Prerequisites
 
-หากเครื่องของคุณยังไม่มี **Node.js** ให้ทำตามขั้นตอนดังนี้:
+If your machine does not have **Node.js** installed, follow these steps:
 
-1. เข้าไปที่เว็บไซต์ [nodejs.org](https://nodejs.org/)
-2. ดาวน์โหลดและติดตั้งเวอร์ชัน **LTS** (แนะนำ)
-3. ตรวจสอบการติดตั้งโดยเปิด Terminal แล้วพิมพ์:
+1. Visit the [nodejs.org](https://nodejs.org/) website.
+2. Download and install the **LTS** version (recommended).
+3. Verify the installation by opening your Terminal and typing:
 
 ```bash
 node -v
 npm -v
 ```
 
-> ต้องมีเลขเวอร์ชันปรากฏขึ้นมา
+> A version number must appear in the output.
 
 ---
 
 ## 2. Library Installation
 
-เมื่อมี Node.js แล้ว ให้เปิด Terminal ในโฟลเดอร์โปรเจกต์นี้ แล้วรันคำสั่งเพื่อติดตั้งเครื่องมือที่จำเป็น:
+Once Node.js is installed, open the Terminal in this project folder and run the following command to install the necessary tools:
 
 ```bash
 npm install --save-dev typescript jest ts-jest @types/jest @types/node
@@ -31,13 +31,13 @@ npm install --save-dev typescript jest ts-jest @types/jest @types/node
 
 ## 3. Configuration
 
-เพื่อให้ TypeScript และ Jest ทำงานร่วมกันได้โดยไม่มีเส้นแดง (Error) ใน Editor:
+To ensure TypeScript and Jest work together without errors in your editor:
 
 ```bash
 npx tsc --init
 ```
 
-โดยแก้ไขค่าให้ตรงตามไฟล์ด้านล่าง
+Modify the configuration values to match the settings below:
 
 ```json
 {
@@ -52,7 +52,7 @@ npx tsc --init
 }
 ```
 
-สร้างไฟล์ `jest.config.js` ด้วยคำสั่ง:
+Create the `jest.config.js` file using this command:
 
 ```bash
 npx ts-jest config:init
@@ -60,9 +60,9 @@ npx ts-jest config:init
 
 ---
 
-## 4. วิธีการรัน Unit Test
+## 4. Running Unit Tests
 
-เมื่อเขียนโค้ดเสร็จแล้ว ให้ใช้คำสั่งนี้เพื่อทดสอบความถูกต้องของ Logic:
+Once you have finished writing your code, use this command to verify its correctness:
 
 ```bash
 npx jest
@@ -76,9 +76,9 @@ npx jest
 ts-merge-project/
 ├── node_modules/
 ├── src/
-│   └── merge.ts        # ไฟล์หลักที่เขียนฟังก์ชัน merge
+│   └── merge.ts         # Main file containing the merge function
 ├── test/
-│   └── merge.test.ts   # ไฟล์สำหรับเขียน Unit Test
+│   └── merge.test.ts    # File for writing Unit Tests
 ├── jest.config.js
 ├── package.json
 ├── tsconfig.json

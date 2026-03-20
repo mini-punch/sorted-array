@@ -68,6 +68,22 @@ Once you have finished writing your code, use this command to verify its correct
 npx jest
 ```
 
+Alternatively, you can also run tests using:
+
+```bash
+npm test
+```
+
+> To enable this, make sure your `package.json` has the following script defined:
+
+```json
+{
+  "scripts": {
+    "test": "jest"
+  }
+}
+```
+
 ---
 
 ## Project Structure

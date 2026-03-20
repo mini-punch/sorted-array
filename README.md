@@ -29,38 +29,7 @@ npm install --save-dev typescript jest ts-jest @types/jest @types/node
 
 ---
 
-## 3. Configuration
-
-To ensure TypeScript and Jest work together without errors in your editor:
-
-```bash
-npx tsc --init
-```
-
-Modify the configuration values to match the settings below:
-
-```json
-{
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "CommonJS",
-    "strict": true,
-    "types": ["jest", "node"],
-    "skipLibCheck": true,
-    "noUncheckedIndexedAccess": true
-  }
-}
-```
-
-Create the `jest.config.js` file using this command:
-
-```bash
-npx ts-jest config:init
-```
-
----
-
-## 4. Running Unit Tests
+## 3. Running Unit Tests
 
 Once you have finished writing your code, use this command to verify its correctness:
 
